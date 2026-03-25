@@ -1,4 +1,44 @@
+import fs from "node:fs";
+import path from "node:path";
 import nodemailer from "nodemailer";
+
+const readLocalEnv = () => {
+  try {
+    const envPath = path.resolve(process.cwd(), ".env");
+
+    if (!fs.existsSync(envPath)) {
+      return {};
+    }
+
+    return fs
+      .readFileSync(envPath, "utf8")
+      .split(/\r?\n/)
+      .reduce((accumulator, line) => {
+        const trimmedLine = line.trim();
+
+        if (!trimmedLine || trimmedLine.startsWith("#")) {
+          return accumulator;
+        }
+
+        const separatorIndex = trimmedLine.indexOf("=");
+
+        if (separatorIndex === -1) {
+          return accumulator;
+        }
+
+        const key = trimmedLine.slice(0, separatorIndex).trim();
+        const value = trimmedLine.slice(separatorIndex + 1).trim();
+
+        if (key) {
+          accumulator[key] = value;
+        }
+
+        return accumulator;
+      }, {});
+  } catch {
+    return {};
+  }
+};
 
 const jsonResponse = (statusCode, body) => ({
   statusCode,
@@ -13,7 +53,9 @@ export async function handler(event) {
     return jsonResponse(405, { error: "Method not allowed. Use POST." });
   }
 
-  const { EMAIL_USER, EMAIL_PASS } = process.env;
+  const localEnv = readLocalEnv();
+  const EMAIL_USER = process.env.EMAIL_USER || localEnv.EMAIL_USER;
+  const EMAIL_PASS = process.env.EMAIL_PASS || localEnv.EMAIL_PASS;
 
   if (!EMAIL_USER || !EMAIL_PASS) {
     return jsonResponse(500, { error: "Email configuration is missing." });
