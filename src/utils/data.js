@@ -134,7 +134,7 @@ export const teamMembers = [
       "Leads social media direction, creative planning, and brand presence across digital campaigns.",
   },
   {
-    name: "Gayatri Yelam",
+    name: "Apeksha Chavan",
     role: "Video Editing & Social Media Marketing",
     description:
       "Creates edited video content and supports social media marketing with platform-ready creative assets.",
