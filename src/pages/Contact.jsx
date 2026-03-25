@@ -22,9 +22,9 @@ function Contact() {
 
   const contactDetails = useMemo(
     () => [
-      { label: "Email", value: "hello@satronixtechnology.com", icon: Mail },
+      { label: "Email", value: "satronixtechnology@gmail.com", icon: Mail },
       { label: "Phone", value: "+91 9356965877", icon: Phone },
-      { label: "Location", value: "Baner, Pune", icon: MapPin },
+      { label: "Location", value: "Hinjewadi, Pune", icon: MapPin },
     ],
     [],
   );
