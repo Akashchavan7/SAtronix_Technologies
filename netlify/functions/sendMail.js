@@ -70,11 +70,12 @@ export async function handler(event) {
   }
 
   const name = payload.name?.trim();
+  const phone = payload.phone?.trim();
   const email = payload.email?.trim();
   const message = payload.message?.trim();
 
-  if (!name || !email || !message) {
-    return jsonResponse(400, { error: "Name, email, and message are required." });
+  if (!name || !phone || !email || !message) {
+    return jsonResponse(400, { error: "Name, mobile number, email, and message are required." });
   }
 
   const transporter = nodemailer.createTransport({
@@ -94,6 +95,7 @@ export async function handler(event) {
       replyTo: email,
       subject: `New contact form message from ${name}`,
       text: `Name: ${name}
+Mobile Number: ${phone}
 Email: ${email}
 
 Message:
@@ -102,6 +104,7 @@ ${message}`,
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #111827;">
           <h2 style="margin-bottom: 16px;">New Contact Form Submission</h2>
           <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Mobile Number:</strong> ${phone}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Message:</strong></p>
           <p style="white-space: pre-wrap;">${message}</p>

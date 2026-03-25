@@ -11,6 +11,7 @@ import { socialLinks } from "../utils/data";
 
 const initialValues = {
   name: "",
+  phone: "",
   email: "",
   message: "",
 };
@@ -35,6 +36,12 @@ function Contact() {
 
     if (!formData.name.trim()) {
       nextErrors.name = "Please enter your name.";
+    }
+
+    if (!formData.phone.trim()) {
+      nextErrors.phone = "Please enter your mobile number.";
+    } else if (!/^[0-9+\-\s()]{10,}$/.test(formData.phone.trim())) {
+      nextErrors.phone = "Please enter a valid mobile number.";
     }
 
     if (!formData.email.trim()) {
@@ -170,6 +177,22 @@ function Contact() {
                     className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/25 focus:border-cyan-300/50 focus:bg-white/8"
                   />
                   {errors.name && <p className="mt-2 text-sm text-rose-300">{errors.name}</p>}
+                </div>
+
+                <div>
+                  <label className="mb-2 block text-sm text-white/65" htmlFor="phone">
+                    Mobile Number
+                  </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+91 98765 43210"
+                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/25 focus:border-cyan-300/50 focus:bg-white/8"
+                  />
+                  {errors.phone && <p className="mt-2 text-sm text-rose-300">{errors.phone}</p>}
                 </div>
 
                 <div>
