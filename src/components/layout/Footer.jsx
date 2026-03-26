@@ -23,7 +23,7 @@ function Footer() {
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/45">Navigate</p>
           <div className="mt-4 flex flex-wrap gap-3">
-            {navLinks.map((item) => (
+            {navLinks.filter((item) => item.href !== "/projects").map((item) => (
               <NavLink
                 key={item.href}
                 to={item.href}
@@ -64,3 +64,5 @@ function Footer() {
 }
 
 export default Footer;
+
+
