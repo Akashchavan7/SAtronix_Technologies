@@ -28,8 +28,10 @@ function Navbar() {
               to={item.href}
               className={({ isActive }) =>
                 cn(
-                  "rounded-full px-4 py-2 text-sm text-white/65 transition hover:text-white",
-                  isActive && "bg-white/10 text-white",
+                  "rounded-full border px-4 py-2 text-sm font-medium transition duration-300",
+                  isActive
+                    ? "border-cyan-300/35 bg-gradient-to-r from-cyan-400/20 via-sky-400/12 to-white/10 text-white shadow-[0_10px_30px_rgba(56,189,248,0.22)]"
+                    : "border-transparent text-white/68 hover:border-white/12 hover:bg-white/7 hover:text-white",
                 )
               }
             >
@@ -46,7 +48,7 @@ function Navbar() {
 
         <button
           type="button"
-          className="rounded-full border border-white/10 p-2 text-white md:hidden"
+          className="rounded-full border border-white/15 bg-white/8 p-2 text-white md:hidden"
           aria-label="Toggle menu"
           onClick={() => setIsOpen((value) => !value)}
         >
@@ -74,7 +76,14 @@ function Navbar() {
                 <NavLink
                   key={item.href}
                   to={item.href}
-                  className="rounded-2xl px-4 py-3 text-white/75 transition hover:bg-white/5 hover:text-white"
+                  className={({ isActive }) =>
+                    cn(
+                      "rounded-2xl border px-4 py-3 text-sm font-medium transition duration-300",
+                      isActive
+                        ? "border-cyan-300/30 bg-gradient-to-r from-cyan-400/18 via-sky-400/12 to-white/8 text-white shadow-[0_10px_26px_rgba(56,189,248,0.18)]"
+                        : "border-transparent text-white/78 hover:border-white/10 hover:bg-white/10 hover:text-white",
+                    )
+                  }
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -92,4 +101,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
