@@ -5,7 +5,7 @@ import SectionWrapper from "../components/common/SectionWrapper";
 import Card from "../components/common/Card";
 import FadeInSection from "../components/animations/FadeInSection";
 import AnimatedText from "../components/common/AnimatedText";
-import { leadership, stats, teamMembers, technologies, timeline } from "../utils/data";
+import { stats, teamMembers, technologies, timeline } from "../utils/data";
 
 function About() {
   return (
@@ -131,32 +131,12 @@ function About() {
 
       <SectionWrapper className="pt-4">
         <FadeInSection className="mb-10">
-          <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/70">Leadership</p>
-          <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">
-            The people guiding SAtronix Technology
-          </h2>
-        </FadeInSection>
-        <div className="grid gap-6 lg:grid-cols-2">
-          {leadership.map((person, index) => (
-            <FadeInSection key={person.name} delay={index * 0.08}>
-              <Card className="h-full">
-                <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/70">{person.role}</p>
-                <h2 className="mt-4 font-display text-3xl font-semibold">{person.name}</h2>
-                <p className="mt-4 text-white/65">{person.description}</p>
-              </Card>
-            </FadeInSection>
-          ))}
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper className="pt-4">
-        <FadeInSection className="mb-10">
           <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/70">Team</p>
           <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">
-            The specialists behind delivery and growth
+            The people behind delivery, growth, and client success
           </h2>
         </FadeInSection>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member, index) => (
             <FadeInSection key={member.name} delay={index * 0.06}>
               <Card className="h-full">

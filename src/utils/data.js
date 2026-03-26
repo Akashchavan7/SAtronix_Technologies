@@ -98,28 +98,18 @@ export const featuredProjects = [
   },
 ];
 
-
-export const leadership = [
-  {
-    name: "Akash Chavan",
-    role: "Founder",
-    description:
-      "Leads product direction, development strategy, and the execution standards behind SAtronix Technology's digital work.",
-  },
-  {
-    name: "Sakshi Pawar",
-    role: "Co-Founder",
-    description:
-      "Shapes creative direction, brand communication, and client collaboration to keep every delivery aligned and memorable.",
-  },
-];
-
 export const teamMembers = [
   {
     name: "Akash Chavan",
-    role: "Development & Business Growth",
+    role: "Founder & Product Strategy",
     description:
-      "Supports product development, execution planning, and business growth initiatives across the studio.",
+      "Leads product direction, development strategy, and execution standards across SAtronix Technology projects.",
+  },
+  {
+    name: "Sakshi Pawar",
+    role: "Co-Founder & Creative Direction",
+    description:
+      "Shapes creative direction, brand communication, and client collaboration to keep every delivery aligned and memorable.",
   },
   {
     name: "Dhananjay Ghorapade",
@@ -128,10 +118,16 @@ export const teamMembers = [
       "Handles client coordination, business communication, and relationship-building to keep projects moving smoothly.",
   },
   {
-    name: "Sakshi Pawar",
-    role: "Social Media Leadership",
+    name: "Prasad Chavan",
+    role: "Business Development & Client Relationship",
     description:
-      "Leads social media direction, creative planning, and brand presence across digital campaigns.",
+      "Supports business development, partnership conversations, and client relationship management across ongoing engagements.",
+  },
+  {
+    name: "Vishal Chavan",
+    role: "Cloud, Database & Pipeline Operations",
+    description:
+      "Handles cloud infrastructure, database systems, and deployment pipelines to keep products reliable and scalable.",
   },
   {
     name: "Apeksha Chavan",
@@ -140,6 +136,7 @@ export const teamMembers = [
       "Creates edited video content and supports social media marketing with platform-ready creative assets.",
   },
 ];
+
 export const testimonials = [
   {
     quote:
@@ -202,5 +199,3 @@ export const timeline = [
 export const socialLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/akashchavan0719", icon: ArrowUpRight },
 ];
-
-
