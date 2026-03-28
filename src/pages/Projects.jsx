@@ -51,7 +51,7 @@ function Projects() {
                     </span>
                   </div>
                 </div>
-                <p className="mt-4 text-sm text-white/65 sm:mt-6 sm:text-base">{project.description}</p>
+                <p className="mt-4 text-sm text-white/90 sm:mt-6 sm:text-base">{project.description}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tech.map((item) => (
                     <span key={item} className="rounded-full bg-white/6 px-3 py-2 text-xs text-white/65">
@@ -91,6 +91,7 @@ function Projects() {
 }
 
 export default Projects;
+
 
 
 

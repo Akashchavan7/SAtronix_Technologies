@@ -153,7 +153,7 @@ function Home() {
                   </div>
                 </div>
                 <h3 className="font-display text-2xl font-semibold">{project.title}</h3>
-                <p className="mt-3 text-white/65">{project.description}</p>
+                <p className="mt-3 text-white/90">{project.description}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tech.map((item) => (
                     <span key={item} className="rounded-full bg-white/6 px-3 py-2 text-xs text-white/65">
@@ -217,6 +217,7 @@ function Home() {
 }
 
 export default Home;
+
 
 
 

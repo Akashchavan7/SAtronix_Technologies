@@ -36,12 +36,19 @@ export const services = [
     icon: Smartphone,
   },
   {
-    title: "Video Editing",
+    title: "Data Analysis",
     description:
-      "Sharp, polished video edits designed for brands that want clean storytelling, smooth pacing, and premium visual impact across platforms.",
-    bullets: ["Promotional videos", "YouTube edits", "Short-form brand content"],
-    icon: Clapperboard,
+      "Actionable data analysis solutions that help businesses understand patterns, measure performance, and make smarter decisions with confidence.",
+    bullets: ["Data cleaning and reporting", "Dashboard insights", "Decision-ready solutions"],
+    icon: ChartNoAxesCombined,
   },
+  // {
+  //   title: "Video Editing",
+  //   description:
+  //     "Sharp, polished video edits designed for brands that want clean storytelling, smooth pacing, and premium visual impact across platforms.",
+  //   bullets: ["Promotional videos", "YouTube edits", "Short-form brand content"],
+  //   icon: Clapperboard,
+  // },
   {
     title: "AI Reel Making",
     description:
@@ -199,3 +206,4 @@ export const timeline = [
 export const socialLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/akashchavan0719", icon: ArrowUpRight },
 ];
+
