@@ -147,16 +147,16 @@ function Home() {
                   className={`mb-4 h-44 rounded-[20px] border border-white/10 bg-gradient-to-br sm:mb-6 sm:h-52 sm:rounded-[24px] ${project.accent}`}
                 >
                   <div className="flex h-full items-end rounded-[20px] bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_60%)] p-4 sm:rounded-[24px] sm:p-5">
-                    <div className="rounded-2xl border border-white/10 bg-black/30 px-3 py-2 text-xs uppercase tracking-[0.24em] text-white/65">
+                    <div className="rounded-2xl border border-white/10 bg-black/30 px-3 py-2 text-xs uppercase tracking-[0.24em] text-white/80" style={{ color: "#f8fafc" }}>
                       {project.category}
                     </div>
                   </div>
                 </div>
                 <h3 className="font-display text-2xl font-semibold">{project.title}</h3>
-                <p className="mt-3 text-white/90">{project.description}</p>
+                <p className="mt-3 text-white" style={{ color: "#ffffff" }}>{project.description}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tech.map((item) => (
-                    <span key={item} className="rounded-full bg-white/6 px-3 py-2 text-xs text-white/65">
+                    <span key={item} className="rounded-full bg-white/6 px-3 py-2 text-xs text-white/90" style={{ color: "#f8fafc" }}>
                       {item}
                     </span>
                   ))}
@@ -217,6 +217,7 @@ function Home() {
 }
 
 export default Home;
+
 
 
 

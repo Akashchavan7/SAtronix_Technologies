@@ -43,18 +43,18 @@ function Projects() {
                 >
                   <div className="flex h-full items-end justify-between rounded-[18px] border border-white/10 bg-black/25 p-4 sm:rounded-[22px] sm:p-5">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.24em] text-white/55">{project.category}</p>
+                      <p className="text-xs uppercase tracking-[0.24em] text-white/80" style={{ color: "#f8fafc" }}>{project.category}</p>
                       <h3 className="mt-2.5 font-display text-xl font-semibold sm:mt-3 sm:text-2xl">{project.title}</h3>
                     </div>
-                    <span className="rounded-full border border-white/10 bg-white/8 px-3 py-2 text-xs text-white/70">
+                    <span className="rounded-full border border-white/10 bg-white/8 px-3 py-2 text-xs text-white/90" style={{ color: "#ffffff" }}>
                       Preview
                     </span>
                   </div>
                 </div>
-                <p className="mt-4 text-sm text-white/90 sm:mt-6 sm:text-base">{project.description}</p>
+                <p className="mt-4 text-sm text-white sm:mt-6 sm:text-base" style={{ color: "#ffffff" }}>{project.description}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tech.map((item) => (
-                    <span key={item} className="rounded-full bg-white/6 px-3 py-2 text-xs text-white/65">
+                    <span key={item} className="rounded-full bg-white/6 px-3 py-2 text-xs text-white/90" style={{ color: "#f8fafc" }}>
                       {item}
                     </span>
                   ))}
@@ -91,6 +91,7 @@ function Projects() {
 }
 
 export default Projects;
+
 
 
 
