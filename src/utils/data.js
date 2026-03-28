@@ -204,6 +204,6 @@ export const timeline = [
 ];
 
 export const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/akashchavan0719", icon: ArrowUpRight },
+  { label: "LinkedIn", href: "www.linkedin.com/in/satronixtechnology", icon: ArrowUpRight },
 ];
 
